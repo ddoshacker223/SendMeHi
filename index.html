@@ -12,7 +12,6 @@
             font-family: Arial, sans-serif;
             background-color: #000;
             background-image: url('images/1.jpg');
-            /* Путь к фоновому изображению */
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -66,6 +65,18 @@
             width: 30px;
             height: 50px;
             z-index: 3;
+            animation: float 2s infinite ease-in-out;
+        }
+        /* Анимация движения вверх-вниз */
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
         }
     </style>
 </head>
@@ -73,7 +84,7 @@
 <body>
     <div class="overlay"></div>
 
-    <!-- Локальная GIF-стрелка из папки images -->
+    <!-- Стрелка с анимацией -->
     <img src="images/1.png" alt="Стрілка до меню" class="arrow-gif" />
 
     <div class="popup">
